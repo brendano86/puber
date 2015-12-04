@@ -23,10 +23,10 @@
                     <button type="button" id="btnStart" class="btn btn-danger btn-lg">Start Ride</button>
                     
                     <br /><br />
-                    <button type="button" class="btn btn-warning btn-lg">No car available</button>
+                    <button type="button" id="btnUnk" class="btn btn-warning btn-lg">No car available</button>
                     
                     <br /><br />
-                    <button type="button" class="btn btn-success btn-lg">Ride complete</button>
+                    <button type="button" id="btnDone" class="btn btn-success btn-lg">Ride complete</button>
                     <br />
 </div>
             </div>
@@ -49,7 +49,23 @@
         $(document).ready(function () {
             $("#btnStart").click(function () {
                 $.ajax({
-                    url: "http://mvpuber.webscript.io/setstatus", success: function (result) {
+                    url: "http://mvpuber.webscript.io/setstatus?status=riding", success: function (result) {
+                        $("#div1").html(result);
+                    }
+                });
+            });
+
+            $("#btnUnk").click(function () {
+                $.ajax({
+                    url: "http://mvpuber.webscript.io/setstatus?status=Unknown", success: function (result) {
+                        $("#div1").html(result);
+                    }
+                });
+            });
+
+            $("#btnDone").click(function () {
+                $.ajax({
+                    url: "http://mvpuber.webscript.io/setstatus?status=done", success: function (result) {
                         $("#div1").html(result);
                     }
                 });
