@@ -1,3 +1,11 @@
 .btn-warning {
   background-color: #fcf8e3;
 }
+
+.white-text {
+  color: #fff;
+}
+
+.yellow-level {
+  background-color: #f3d431 !important;
+}
