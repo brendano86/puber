@@ -93,6 +93,12 @@
 
     <script>
         $(document).ready(function () {
+            $.ajax({
+                    url: "http://mvpuber.webscript.io/setstatus", success: function (result) {
+                        setResults(result);
+                    }
+                });
+                
             $("#btnStart").click(function () {
                 $.ajax({
                     url: "http://mvpuber.webscript.io/setstatus?status=red", success: function (result) {
