@@ -21,7 +21,7 @@ There are 5 possible Puber statuses, similar to other alert systems in the world
 1. Severe (red) - Ride in progress.  Abort mission.
 2. High (orange) - Ride has been in progress for 10 minutes or more and/or an UPU (Unidentifed Puber User) has been spotted.  Could be okay.  Could be the opposite of okay.
 3. Elevated (yellow) - Ride is over, but need to give it a minute.  5 minutes or so after this status, Puber will sound the all clear
-4. Gaurded (blue) - Ride has been in progress for 20 miunutes or more.  Please be okay...please...
+4. Gaurded (blue) - Ride has been in progress for 20 minutes or more.  Please be okay...please...
 5. Low (green) - Ride is over or it has been 25 minutes or more since last ride or the give it a minute has expired.
 
 ### Timing
