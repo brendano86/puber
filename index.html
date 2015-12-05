@@ -51,7 +51,9 @@
                     <h3 class="panel-title">Puber Status</h3>
                 </div>
                 <div class="panel-body">
-                    Panel content
+                    <div id="currentstatus">
+                        Not sure
+                    </div>
                 </div>
             </div>
         </div>
@@ -65,7 +67,7 @@
             $("#btnStart").click(function () {
                 $.ajax({
                     url: "http://mvpuber.webscript.io/setstatus?status=red", success: function (result) {
-                        $("#div1").html(result);
+                        $("#currentstatus").html(result);
                     }
                 });
             });
@@ -73,7 +75,7 @@
             $("#btnUnk").click(function () {
                 $.ajax({
                     url: "http://mvpuber.webscript.io/setstatus?status=orange", success: function (result) {
-                        $("#div1").html(result);
+                        $("#currentstatus").html(result);
                     }
                 });
             });
@@ -81,7 +83,7 @@
             $("#btnMinute").click(function () {
                 $.ajax({
                     url: "http://mvpuber.webscript.io/setstatus?status=yellow", success: function (result) {
-                        $("#div1").html(result);
+                        $("#currentstatus").html(result);
                     }
                 });
             });
@@ -89,7 +91,7 @@
             $("#btnDone").click(function () {
                 $.ajax({
                     url: "http://mvpuber.webscript.io/setstatus?status=green", success: function (result) {
-                        $("#div1").html(result);
+                        $("#currentstatus").html(result);
                     }
                 });
             });
