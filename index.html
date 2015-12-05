@@ -30,7 +30,14 @@
                             <button type="button" id="btnUnk" class="btn btn-danger btn-lg btn-block">No car available</button>
                             
                             <br /><br />
-                            <button type="button" id="btnDone" class="btn btn-success btn-lg btn-block">Ride complete</button>
+                            <div class="row">
+                                <div class="col-sm-4">
+                                    <button type="button" id="btnMinute" class="btn btn-info btn-lg btn-block">Give it a minute</button>
+                                </div>
+                                <div class="col-sm-8">
+                                    <button type="button" id="btnDone" class="btn btn-success btn-lg btn-block">Ride complete</button>
+                                </div>
+                            </div>
                             <br />
                         </div>
                         <div class="col-sm-2">&nbsp;</div>
@@ -57,7 +64,7 @@
         $(document).ready(function () {
             $("#btnStart").click(function () {
                 $.ajax({
-                    url: "http://mvpuber.webscript.io/setstatus?status=riding", success: function (result) {
+                    url: "http://mvpuber.webscript.io/setstatus?status=red", success: function (result) {
                         $("#div1").html(result);
                     }
                 });
@@ -65,7 +72,15 @@
 
             $("#btnUnk").click(function () {
                 $.ajax({
-                    url: "http://mvpuber.webscript.io/setstatus?status=Unknown", success: function (result) {
+                    url: "http://mvpuber.webscript.io/setstatus?status=orange", success: function (result) {
+                        $("#div1").html(result);
+                    }
+                });
+            });
+            
+            $("#btnMinute").click(function () {
+                $.ajax({
+                    url: "http://mvpuber.webscript.io/setstatus?status=yellow", success: function (result) {
                         $("#div1").html(result);
                     }
                 });
@@ -73,7 +88,7 @@
 
             $("#btnDone").click(function () {
                 $.ajax({
-                    url: "http://mvpuber.webscript.io/setstatus?status=done", success: function (result) {
+                    url: "http://mvpuber.webscript.io/setstatus?status=green", success: function (result) {
                         $("#div1").html(result);
                     }
                 });
