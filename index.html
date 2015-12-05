@@ -66,11 +66,11 @@
                                 <h4 class="list-group-item-heading white-text">Elevated</h4>
                                 <p class="list-group-item-text">Give it a minute</p>
                               </a>
-                              <a href="#" id="orange" class="list-group-item btn-info white-text">
+                              <a href="#" id="blue" class="list-group-item btn-info white-text">
                                 <h4 class="list-group-item-heading white-text">Guarded</h4>
                                 <p class="list-group-item-text">Ride has been in progress for 20 miunutes or more. Please be okay...please...</p>
                               </a>
-                              <a href="#" id="orange" class="list-group-item btn-success white-text">
+                              <a href="#" id="green" class="list-group-item btn-success white-text">
                                 <h4 class="list-group-item-heading white-text">Low</h4>
                                 <p class="list-group-item-text">All clear!</p>
                               </a>
@@ -128,11 +128,34 @@
         
         function setResults(result)
         {
+            if (result != "red") {
+                document.getElementById("red").className = "list-group-item disabled";    
+            } else {
+                document.getElementById("red").className = "list-group-item active white-text";
+            }
+            
+            if (result != "orange") {
+                document.getElementById("orange").className = "list-group-item disabled";    
+            } else {
+                document.getElementById("orange").className = "list-group-item btn-danger white-text";
+            }
+            
             if (result != "yellow") {
                 document.getElementById("yellow").className = "list-group-item disabled";    
             } else {
                 document.getElementById("yellow").className = "list-group-item yellow-level white-text";
-                //list-group-item yellow-level white-text
+            }
+            
+            if (result != "blue") {
+                document.getElementById("blue").className = "list-group-item disabled";    
+            } else {
+                document.getElementById("blue").className = "list-group-item btn-info white-text";
+            }
+            
+            if (result != "green") {
+                document.getElementById("green").className = "list-group-item disabled";    
+            } else {
+                document.getElementById("green").className = "list-group-item btn-success white-text;
             }
         }
 
