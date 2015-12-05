@@ -96,7 +96,7 @@
             $("#btnStart").click(function () {
                 $.ajax({
                     url: "http://mvpuber.webscript.io/setstatus?status=red", success: function (result) {
-                        $("#currentstatus").html(result);
+                        setResults(result);
                     }
                 });
             });
@@ -104,7 +104,7 @@
             $("#btnUnk").click(function () {
                 $.ajax({
                     url: "http://mvpuber.webscript.io/setstatus?status=orange", success: function (result) {
-                        $("#currentstatus").html(result);
+                        setResults(result);
                     }
                 });
             });
@@ -112,7 +112,7 @@
             $("#btnMinute").click(function () {
                 $.ajax({
                     url: "http://mvpuber.webscript.io/setstatus?status=yellow", success: function (result) {
-                        $("#currentstatus").html(result);
+                        setResults(result);
                     }
                 });
             });
@@ -120,11 +120,16 @@
             $("#btnDone").click(function () {
                 $.ajax({
                     url: "http://mvpuber.webscript.io/setstatus?status=green", success: function (result) {
-                        $("#currentstatus").html(result);
+                        setResults(result);
                     }
                 });
             });
         });
+        
+        function setResults(result)
+        {
+            document.getElementById("yellow").className = "list-group-item disabled";
+        }
     </script>
 </body>
 
