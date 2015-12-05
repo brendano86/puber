@@ -10,6 +10,7 @@
 </head>
 
 <body>
+    <div class="container">
     <h1>Welcome to Puber</h1>
     <div class="row">
         <div class="col-md-6">
@@ -18,16 +19,22 @@
                     <h3 class="panel-title">Request Puber</h3>
                 </div>
                 <div class="panel-body text-center">
-                    <br />
+                    <div class="row">
+                        <div class="col-sm-2">&nbsp;</div>
+                        <div class="col-sm-10">
+                            <br />
                     
-                    <button type="button" id="btnStart" class="btn btn-danger btn-lg">Start Ride</button>
-                    
-                    <br /><br />
-                    <button type="button" id="btnUnk" class="btn btn-warning btn-lg">No car available</button>
-                    
-                    <br /><br />
-                    <button type="button" id="btnDone" class="btn btn-success btn-lg">Ride complete</button>
-                    <br />
+                            <button type="button" id="btnStart" class="btn btn-lg btn-block">Start Ride</button>
+                            
+                            <br /><br />
+                            <button type="button" id="btnUnk" class="btn btn-lg btn-block">No car available</button>
+                            
+                            <br /><br />
+                            <button type="button" id="btnDone" class="btn btn-success btn-lg btn-block">Ride complete</button>
+                            <br />
+                        </div>
+                        <div class="col-sm-2">&nbsp;</div>
+                    </div>
 </div>
             </div>
         </div>
@@ -41,6 +48,7 @@
                 </div>
             </div>
         </div>
+    </div>
     </div>
     <script src="assets/js/jquery.min.js"></script>
     <script src="assets/bootstrap/js/bootstrap.min.js"></script>
