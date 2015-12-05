@@ -18,6 +18,8 @@ Before you go, check Puber to see the current status of the "passenger's seat."
 
 There are 5 possible Puber statuses, similar to other alert systems in the world.
 
+<span style="color:#ff000fff;">Word up</span>
+
 1. Severe (red) - Ride in progress.  Abort mission.
 2. High (orange) - Ride has been in progress for 10 minutes or more and/or an UPU (Unidentifed Puber User) has been spotted.  Could be okay.  Could be the opposite of okay.
 3. Elevated (yellow) - Ride is over, but need to give it a minute.  5 minutes or so after this status, Puber will sound the all clear
