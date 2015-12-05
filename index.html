@@ -128,7 +128,10 @@
         
         function setResults(result)
         {
-            document.getElementById("yellow").className = "list-group-item disabled";
+            if (result != "yellow") {
+                document.getElementById("yellow").className = "list-group-item disabled";    
+            }
+            
         }
     </script>
 </body>
