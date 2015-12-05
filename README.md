@@ -18,8 +18,6 @@ Before you go, check Puber to see the current status of the "passenger's seat."
 
 There are 5 possible Puber statuses, similar to other alert systems in the world.
 
-<span style="color:#ff000fff;">Word up</span>
-
 1. Severe (red) - Ride in progress.  Abort mission.
 2. High (orange) - Ride has been in progress for 10 minutes or more and/or an UPU (Unidentifed Puber User) has been spotted.  Could be okay.  Could be the opposite of okay.
 3. Elevated (yellow) - Ride is over, but need to give it a minute.  5 minutes or so after this status, Puber will sound the all clear
@@ -28,4 +26,15 @@ There are 5 possible Puber statuses, similar to other alert systems in the world
 
 ### Timing
 
-Every 5 minutes the Puber clean up service (PCS) checks for the current puber status.  Based on the status level at the time
+Every 5 minutes the Puber clean up service (PCS) checks for the current puber status.  Based on the status level at the time, the following rules are applied:
+
+* If the status is red
+ * If it has been 10 minutes or more since status change, change status to orange
+* If the status is orange
+ * If it has been 10 minutes or more since status change, change status to blue
+* If the status is yellow
+ * If it has been 5 minutes or more since status change, change status to green.
+* If the status is blue
+ * If it has been 5 minutes or more since status change, change status to green.
+* If the status is green
+ * Do nothing
