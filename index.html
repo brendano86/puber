@@ -147,24 +147,28 @@
             } else {
                 document.getElementById("orange").className = "list-group-item btn-danger white-text";
             }
+            $("#orange p").toggleClass("hidden", (result != "orange"))
             
             if (result != "yellow") {
                 document.getElementById("yellow").className = "list-group-item disabled";    
             } else {
                 document.getElementById("yellow").className = "list-group-item yellow-level white-text";
             }
+            $("#yellow p").toggleClass("hidden", (result != "yellow"))
             
             if (result != "blue") {
                 document.getElementById("blue").className = "list-group-item disabled";    
             } else {
                 document.getElementById("blue").className = "list-group-item btn-info white-text";
             }
+            $("#green p").toggleClass("hidden", (result != "green"))
             
             if (result != "green") {
                 document.getElementById("green").className = "list-group-item disabled";    
             } else {
                 document.getElementById("green").className = "list-group-item btn-success white-text";
             }
+            $("#green p").toggleClass("hidden", (result != "green"))
         }
 
     </script>
