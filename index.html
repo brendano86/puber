@@ -141,9 +141,9 @@
             //    document.getElementById("red").className = "list-group-item active white-text";
             //}
             
-            $("#red").toggleClass("disabled", result = "red")
-            $("#red").toggleClass("active", result != "red")
-            $("#red").toggleClass("white-text", result != "red")
+            $("#red").toggleClass("disabled", result != "red")
+            $("#red").toggleClass("active", result = "red")
+            $("#red").toggleClass("white-text", result = "red")
             
             if (result != "orange") {
                 document.getElementById("orange").className = "list-group-item disabled";    
