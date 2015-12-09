@@ -1,33 +1,20 @@
 <html> 
   <head>
-    <title>S3 POST Form</title> 
+    <title>Azure POST Form</title> 
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
   </head>
 
   <body> 
-    <form action="https://puber.s3.amazonaws.com" method="post" enctype="multipart/form-data">
-        <input type="hidden" name="AWSAccessKeyId" value="AKIAIJ5OJ3VZIOBRILSA"/>
-        <input type="hidden" name="key"/>
-        <input type="hidden" name="policy"/>
-        <input type="hidden" name="success_action_redirect" value="https://examples.webscript.io/s3/download"/>
-        <input type="hidden" name="signature"/>
-        <label for="file">Choose a file (1MB maximum):
-        </label>
-        <input type="file" name="file"/>
-        <button type="submit" class="btn btn-primary">Upload
-        </button>
-      </form>
+   <form action="https://examples.webscript.io/azure/upload" method="post" enctype="multipart/form-data">
+  <label for="file">Choose a file (10MB maximum):
+  </label>
+  <input type="file" name="file"/>
+  <button type="submit" class="btn btn-primary">Upload
+  </button>
+</form>
     
     <script src="assets/js/jquery.min.js"></script>
     <script src="assets/bootstrap/js/bootstrap.min.js"></script>
-   <script>$(function () {
-     $.getJSON('https://examples.webscript.io/s3/policy', function (data) {
-      $('input[name="key"]').val(data.key);
-      $('input[name="policy"]').val(data.policy);
-      $('input[name="signature"]').val(data.signature);
-     });
-    });
-    
-    </script>
+ 
   </body>
 </html>
