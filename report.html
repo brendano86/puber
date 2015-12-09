@@ -1,0 +1,32 @@
+<html> 
+  <head>
+    <title>S3 POST Form</title> 
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+  </head>
+
+  <body> 
+    <form action="https://webscript_demo.s3.amazonaws.com" method="post" enctype="multipart/form-data">
+        <input type="hidden" name="AWSAccessKeyId" value="AKIAJAOH7CPDLX3MYG3A"/>
+        <input type="hidden" name="key"/>
+        <input type="hidden" name="policy"/>
+        <input type="hidden" name="success_action_redirect" value="http://www.magview.com"/>
+        <input type="hidden" name="signature"/>
+        <label for="file">Choose a file (1MB maximum):
+        </label>
+        <input type="file" name="file"/>
+        <button type="submit" class="btn btn-primary">Upload
+        </button>
+      </form>
+      
+    <script>
+    $(function () {
+       $.getJSON('https://mvaws.webscript.io/S3Policy', function (data) {
+        $('input[name="key"]').val(data.key);
+        $('input[name="policy"]').val(data.policy);
+        $('input[name="signature"]').val(data.signature);
+       });
+      });
+      
+      </script>
+  </body>
+</html>
