@@ -20,15 +20,14 @@
     
     <script src="assets/js/jquery.min.js"></script>
     <script src="assets/bootstrap/js/bootstrap.min.js"></script>
-    <script>
-     $(document).ready(function () {
-       $getJSON('https://mvaws.webscript.io/S3Policy', function (data) {
-        $('input[name="key"]').val(data.key);
-        $('input[name="policy"]').val(data.policy);
-        $('input[name="signature"]').val(data.signature);
-       });
-      });
-      
-      </script>
+   <script>$(function () {
+     $.getJSON('https://examples.webscript.io/s3/policy', function (data) {
+      $('input[name="key"]').val(data.key);
+      $('input[name="policy"]').val(data.policy);
+      $('input[name="signature"]').val(data.signature);
+     });
+    });
+    
+    </script>
   </body>
 </html>
