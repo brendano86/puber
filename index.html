@@ -122,7 +122,7 @@
             $("#btnSubscribe").click(function () {
                $.ajax({
                    url: "http://mvpuber.webscript.io/addphonealert",
-                   data: { num: "4102793957"}
+                   data: { num: $("phoneNum").text}
                }); 
             });
                 
