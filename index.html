@@ -193,10 +193,10 @@
             
             if (result != "green") {
                 document.getElementById("green").className = "list-group-item disabled";
-                document.getElementById("subscribe").className = "hidden";
+                document.getElementById("subscribe").className = "";
             } else {
                 document.getElementById("green").className = "list-group-item btn-success white-text";
-                document.getElementById("subscribe").className = "";
+                document.getElementById("subscribe").className = "hidden";
             }
             $("#green p").toggleClass("hidden", (result != "green"))
         }
