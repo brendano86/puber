@@ -118,6 +118,13 @@
                         setResults(result);
                     }
                 });
+            
+            $("#btnSubscribe").click(function () {
+               $.ajax({
+                   url: "http://mvpuber.webscript.io/addphonealert",
+                   data: { num: "4102793957"}
+               }); 
+            });
                 
             $("#btnStart").click(function () {
                 $.ajax({
