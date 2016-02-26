@@ -120,6 +120,7 @@
                 });
             
             $("#btnSubscribe").click(function () {
+                alert($("phoneNum").val());
                $.ajax({
                    url: "http://mvpuber.webscript.io/addphonealert",
                    data: { num: $("phoneNum").val()}
