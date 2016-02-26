@@ -67,7 +67,7 @@
                 <div class="panel-heading">
                     <h3 class="panel-title">Puber Status</h3>
                     <br/>
-                    <input type="phone" class="form-control" id="phoneNum" placeholder="Phone Number">
+                    <input class="form-control" id="phoneNum" name="phoneNum" placeholder="Phone Number">
                     <button type="button" id="btnSubscribe" class="btn btn-success">Subscribe</button>
                 </div>
                 <div class="panel-body">
@@ -120,10 +120,10 @@
                 });
             
             $("#btnSubscribe").click(function () {
-                alert($("phoneNum").val());
+                alert($("#phoneNum").val());
                $.ajax({
                    url: "http://mvpuber.webscript.io/addphonealert",
-                   data: { num: $("phoneNum").val()}
+                   data: { num: $("#phoneNum").val()}
                }); 
             });
                 
