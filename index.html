@@ -71,6 +71,8 @@
                     <input class="form-control" id="phoneNum" name="phoneNum" placeholder="Phone Number">
                     <button type="button" id="btnSubscribe" class="btn btn-success">Subscribe</button>
                     </span>
+                    <span id="subscribeSuccess" class="hidden"><br/>
+                        Thanks! We'll let you know when Puber is back to green.</span>
                 </div>
                 <div class="panel-body">
                     <div id="currentstatus" class="row">
@@ -126,6 +128,8 @@
                    url: "http://mvpuber.webscript.io/addphonealert",
                    data: { num: $("#phoneNum").val()}
                }); 
+               document.getElementById("subscribe").className = "hidden";
+               document.getElementById("subscribeSuccess").className = "hidden";
             });
                 
             $("#btnStart").click(function () {
